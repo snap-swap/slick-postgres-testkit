@@ -1,4 +1,4 @@
-package com.snapswap.slick
+package com.snapswap.db
 
 import javax.sql.DataSource
 

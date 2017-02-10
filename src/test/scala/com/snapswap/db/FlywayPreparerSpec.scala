@@ -1,4 +1,4 @@
-package com.snapswap.slick
+package com.snapswap.db
 
 import org.scalatest.{AsyncWordSpec, Matchers, OneInstancePerTest}
 import slick.jdbc.PostgresProfile.api._
