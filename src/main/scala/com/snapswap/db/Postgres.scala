@@ -4,8 +4,10 @@ import javax.sql.DataSource
 
 import com.opentable.db.postgres.embedded.PreparedDbProvider
 import com.typesafe.config.{Config, ConfigFactory}
-import slick.jdbc.PostgresProfile.api._
-import collection.JavaConversions._
+import slick.jdbc.JdbcBackend
+
+import scala.collection.JavaConversions._
+
 
 trait Postgres {
   val conf: Config = ConfigFactory.load()
@@ -27,7 +29,8 @@ trait Postgres {
   protected lazy val dataSource: DataSource = provider.createDataSource
 }
 
-object Postgres extends Postgres {
+object Postgres extends Postgres with JdbcBackend {
+
   def nextDB: Database =
     Database.forDataSource(provider.createDataSource)
 
