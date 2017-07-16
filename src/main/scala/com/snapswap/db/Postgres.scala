@@ -32,10 +32,10 @@ trait Postgres {
 object Postgres extends Postgres with JdbcBackend {
 
   def nextDB: Database =
-    Database.forDataSource(provider.createDataSource)
+    Database.forDataSource(provider.createDataSource, None)
 
   trait Fixture {
-    val db: Database = Database.forDataSource(provider.createDataSource)
+    val db: Database = Database.forDataSource(provider.createDataSource, None)
   }
 
 }
