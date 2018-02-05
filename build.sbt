@@ -2,7 +2,7 @@ name := "slick-postgres-testkit"
 
 organization := "com.snapswap"
 
-version := "1.0.4"
+version := "1.0.5"
 
 scalaVersion := "2.11.8"
 
@@ -28,7 +28,7 @@ libraryDependencies ++= {
   val akkaV = "2.4.11"
   Seq(
     "org.flywaydb" % "flyway-core" % "5.0.2",
-    "com.opentable.components" % "otj-pg-embedded" % "0.9.0",
+    "com.opentable.components" % "otj-pg-embedded" % "0.11.0",
     "com.typesafe.slick" %% "slick" % "3.2.1" % "provided",
     "com.typesafe" % "config" % "1.3.1" % "provided",
     "org.scalatest" %% "scalatest" % "3.0.1" % "test",
